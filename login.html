@@ -1,0 +1,132 @@
+<!doctype html>
+<head>
+    <title>log in!</title>
+
+
+    <style>
+        .divanimate {
+            width: 100px;
+            height: 10px;
+            background-color: red;
+            position: relative;
+            animation-name: animate1;
+            animation-duration: 4s;
+            animation-iteration-count: 200;
+        }
+        @keyframes animate1 {
+            10%   {background-color:red; left:0px; top:00px;}
+            100%  {background-color:yellow; left:1303px; top:0px;}
+        }
+        .box1 {
+            border-style: solid;
+            border-width: 1px;
+            display: block;
+            width: 100px;
+            height: 100px;
+            transition: width 1s, height 1s, background-color 1s, transform 1.5s;
+            right: 5%;
+            left: 5%;
+            top: 5%;
+        }
+
+        .box1:hover {
+            background-color: red;
+            width: 125px;
+            height: 125px;
+            transform: rotate(360deg);
+
+        }
+        body{
+            background-color: black;
+
+        }
+        input[type=text],input[type=password]
+        {
+            width: 30%;
+            padding: 12px 20px;
+            display: inline-block;
+            text-align: center;
+            margin: 24px 0 12px 0;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .loginbutton
+        {
+            background-color: coral;
+            color: white;
+            padding: 15px 22px ;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+        }
+
+        .loginbutton:hover
+        {
+            opacity: 0.8;
+            color: black;
+            width: 200px;
+            transition: width 1s;
+            left: 39%;
+        }
+        .hl {
+            border-right: 6px solid red;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            margin-right: -3px;
+            top: 50%;
+        }
+
+        .box
+        {
+            text-align: center;
+            size: 20px;
+        }
+
+        .containeruname
+        {
+            padding: 10px;
+        }
+        @media screen and (max-width: 300px) {
+            span.containeruname
+            {
+                display: block;
+                float: none;
+            }
+
+        }
+        .header
+        {
+            top: 9%;
+            border-top: 2px solid dodgerblue;
+        }
+
+    </style>
+</head>
+<body>
+<header class="header"></header>
+
+<div class="box">
+    <!--<div class="vhl"></div>-->
+    <br>
+    <div class="box1"><img src="100pixel.jpeg" width="120px"></div>
+    <div class="containeruname">
+        <b style="color: gray">USERNAME OR EMAIL</b>
+        <br>
+        <input type="text"  placeholder="Enter username" name="uname" required>
+        <br>
+        <b style="color: gray">PASSWORD</b>
+        <br>
+        <input type="password" placeholder="Enter password" name="passsword" required>
+        <br>
+        <input type="checkbox"checked="checked" name="remember"><div style="color: gray">remember me<div>
+        <br>
+        <button class="loginbutton" type="submit">login</button>
+        <div class="divanimate"></div>
+        <br>
+    </div></div>
+    </div></div>
+</body>
+</html>
