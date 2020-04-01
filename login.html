@@ -26,7 +26,7 @@
 
         }
         body{
-            background-color: black;
+            background-color: rgba(0,0,0,0.76) ;
 
         }
         input[type=text],input[type=password]
@@ -38,6 +38,16 @@
             margin: 24px 0 12px 0;
             border-radius: 5px;
             font-size: 12px;
+
+        }
+        input:hover{
+            border-style: solid;
+            border-color: red;
+            color: black;
+            text-blink: 1%;
+            font-size: 15px;
+
+
         }
 
         .loginbutton
@@ -63,22 +73,41 @@
 
 
         .box
-        {
-            text-align: center;
+        {   text-align: center;
             size: 20px;
         }
 
+
         .containeruname
         {
-            padding: 10px;
+            padding:100px;
+
         }
 
 
-        .header
+        .header {
+            border-top: 2px solid blue;
+
+        }
+
+
+        #grad1
         {
-            top: 9%;
-            border-top: 2px solid dodgerblue;
+            height: 800px;
+            background-image: linear-gradient(to bottom,green,transparent);
+            margin: 0px 0px 0px 0px;
+            padding: 0%;
+            overflow: hidden;
         }
+
+
+
+
+
+
+
+
+
 
     </style>
 </head>
@@ -86,7 +115,7 @@
 <header class="header"></header>
 
 <div class="box">
-    <!--<div class="vhl"></div>-->
+    <div id="grad1" style="text-align: center">
     <br>
     <div class="box1"><img src="100pixel.jpeg" width="120px"></div>
     <div class="containeruname">
@@ -105,5 +134,6 @@
         <br>
     </div></div>
     </div></div>
+</div>
 </body>
 </html>
