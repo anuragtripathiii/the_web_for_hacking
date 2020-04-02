@@ -6,17 +6,55 @@
     <style>
 
 
-
-
-
-        html {
-            height:100%;
+        .menu {
+            display: inline-block;
+            position: absolute;
+            width: 25px;
+            top: 2.5%;
+            left:92%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-family:'Josefin Sans', sans-serif;
+            color: #fff;
+            cursor: pointer;
+        }
+        .menu::before,
+        .menu::after {
+            position: absolute;
+            transition: 0.4s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .menu:before {
+            content: "M \00a0 \00a0 \00a0 \00a0 \0a0U";
+            top: -60px;
+            left: -100%;
+            width: 97px;
+        }
+        .menu:after {
+            content: "N";
+            top: 45px;
+            left: 99%;
+        }
+        .menu:hover::before,
+        .menu:hover::after {
+            top:-4px;
+            opacity: 1;
+            right:97%;
+            transition: 0.2s ease, opacity 0.17s ;
         }
 
-        body {
-            margin:0;
+        .bar {
+            width: 50%;
+            height: 4px;
+            background: white;
+            margin: 2px auto 6px;
+            transition: transform 0.4s ease;
         }
-
+        .bar:hover{
+            background-color: red;
+            color: red;
+        }
         .bg {
             animation:slide 3s ease-in-out infinite alternate;
             background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
@@ -51,45 +89,6 @@
                 transform:translateX(25%);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         .navbar {
             overflow: hidden;
             nav-down: auto;
@@ -122,6 +121,7 @@
             background-color: transparent;
             font-family: inherit;
             margin: 0;
+            position: fixed;
         }
 
 
@@ -135,15 +135,9 @@
         }
 
 
-
-
-
-
-
-
         .subnav-content {
             display: none;
-            position: absolute;
+            position: fixed;
             left: 30%;
             background-color: transparent;
             width: 70%;
@@ -188,7 +182,7 @@
             font-size: 39px;
         }
         .topleft{
-            position: absolute;
+            position: fixed;
             color: white;
               left:3%;
             top:0.1%;
@@ -278,7 +272,7 @@
 
 
  /*for remaining pixels*/
-        @media all and (min-width: 768px) and (max-width: 1200px){
+        @media all and (min-width: 768px) and (max-width: 1400px){
             .boxx{
                 width: 8%;
                 float: none;
@@ -298,6 +292,7 @@
     </style>
 </head>
 <body>
+<div style="padding:0px 0px 0px;">
 <div class="head">
 <p class="pp">welcome to site</p>
 <h2 class="h1">ready to learn</h2>
@@ -321,18 +316,33 @@
 <div class="navbar">
 
     <div class="subnav">
-        <button class="subnavbtn">Menu</button>
+        <div class="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <button class="subnavbtn">
         <div class="subnav-content">
             <a href=login.html>Log in!</a>
             <a href="#team">Scoreboard</a>
             <a href="#careers">Challenges</a>
         </div>
-    </div>
+        </button>
 </div>
-
 <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
+
+
+
+
+
+</div>
+
+
+
+
+
 
 
 
